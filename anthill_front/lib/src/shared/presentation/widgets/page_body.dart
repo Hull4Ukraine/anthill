@@ -18,10 +18,13 @@ class PageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final viewWidth = MediaQuery.of(context).size.width;
 
-    return Center(
-      child: ConstrainedBox(
-        constraints: BoxConstraints(maxWidth: min(maxWidth, viewWidth)),
-        child: child,
+    return SafeArea(
+      minimum: const EdgeInsets.all(8),
+      child: Center(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(maxWidth: min(maxWidth, viewWidth)),
+          child: child,
+        ),
       ),
     );
   }
