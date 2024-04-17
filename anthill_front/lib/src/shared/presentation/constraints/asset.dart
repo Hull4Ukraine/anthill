@@ -1,7 +1,9 @@
 enum Asset {
   logo('images/h4u_logo.png');
 
-  final String assetName;
+  final String _assetName;
 
-  const Asset(this.assetName);
+  String get assetName => 'assets/$_assetName';
+
+  const Asset(this._assetName);
 }
