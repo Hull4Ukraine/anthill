@@ -54065,7 +54065,7 @@ return s.x=s.x.DC(this.b)},
 $S:0}
 A.aK_.prototype={
 $2(a,b){var s=null
-return new A.ex(new A.aw(0,b.b/2,0,1/0),new A.Eq(A.bdZ(s,s,new A.Ci("assets/assets/images/h4u_logo.png",s,s)),s),s)},
+return new A.ex(new A.aw(0,b.b/2,0,1/0),new A.Eq(A.bdZ(s,s,new A.Ci("assets/images/h4u_logo.png",s,s)),s),s)},
 $S:353}
 A.a1O.prototype={
 l5(a,b){var s=J.iq(b.eF($.n9(),t.ew)),r=s==null?null:J.aS5(s)
