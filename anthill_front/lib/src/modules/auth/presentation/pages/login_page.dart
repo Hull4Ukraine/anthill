@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../shared/presentation/constraints/asset.dart';
 import '../../../../shared/presentation/widgets/page_title.dart';
 import '../../../../shared/widgets.dart';
 import '../../application/providers/auth_provider.dart';
@@ -54,6 +55,17 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 child: Column(
                   children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 24),
+                      child: LayoutBuilder(
+                        builder: (context, constraints) => ConstrainedBox(
+                          constraints: BoxConstraints(
+                            maxWidth: constraints.maxWidth / 2,
+                          ),
+                          child: Image.asset(Asset.logo.assetName),
+                        ),
+                      ),
+                    ),
                     TextFormField(
                       validator: isRequired(context),
                       initialValue: _loginDto.email,

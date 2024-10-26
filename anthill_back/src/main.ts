@@ -55,6 +55,7 @@ async function setupSessions(app: INestApplication) {
         cleanupLimit: 2,
         ttl: sessionTtl / msInSecond,
       }).connect(sessionRepo),
+      proxy: true,
       cookie: {
         secure: useSecureCookies,
         httpOnly: true,
